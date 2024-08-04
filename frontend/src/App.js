@@ -17,8 +17,6 @@ function App() {
           <BookList/>
         </div>
       </main>
-
-
     </div>
   );
 }
