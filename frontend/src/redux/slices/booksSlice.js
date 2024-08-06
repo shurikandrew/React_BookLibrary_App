@@ -28,4 +28,6 @@ const booksSlice = createSlice(
 
 export const {addBook, deleteBook,changeFavorite} = booksSlice.actions;
 
+export const selectBooks = (state) => state.books;
+
 export default booksSlice.reducer;
