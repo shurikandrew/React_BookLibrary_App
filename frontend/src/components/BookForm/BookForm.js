@@ -20,7 +20,7 @@ const BookForm = (props) => {
         dispatch(addBook(book));
     }
 
-    const handleAddRandomFromAPI = async () => {
+    const thunkFunction = async (dispatch, getState) => {
         try {
             const res = await axios.get('http://localhost:4000/random-book');
 
@@ -31,7 +31,11 @@ const BookForm = (props) => {
         }catch (error) {
             console.log("Error: ", error);
         }
-    }
+    };
+
+    const handleAddRandomFromAPI = () => {
+        dispatch(thunkFunction);
+    };
 
     const handleSubmit = (e)=>{
         e.preventDefault() ;
