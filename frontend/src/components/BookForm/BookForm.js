@@ -21,7 +21,7 @@ const BookForm = (props) => {
     };
 
     const handleAddRandomFromAPI = () => {
-        dispatch(fetchBook());
+        dispatch(fetchBook('http://localhost:4000/random-book'));
     };
 
     const handleSubmit = (e)=>{
